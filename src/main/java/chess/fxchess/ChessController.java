@@ -2,6 +2,9 @@ package chess.fxchess;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import model.pieces.Piece;
+import model.pieces.enums.Color;
+import model.pieces.enums.PieceType;
 
 public class ChessController {
     @FXML
@@ -9,6 +12,11 @@ public class ChessController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        Piece meh = new Piece(PieceType.PAWN, Color.WHITE);
+        System.out.println(meh.pieceType.getMoveStrategy());
+    }
+
+    public void initialize() {
+
     }
 }
